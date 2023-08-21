@@ -139,7 +139,21 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Action.cpp" />
+    <ClCompile Include="BasicAttack.cpp" />
+    <ClCompile Include="Heal.cpp" />
+    <ClCompile Include="MultiTargetSkill.cpp" />
     <ClCompile Include="Quiz4.cpp" />
+    <ClCompile Include="SingleTargetSkill.cpp" />
+    <ClCompile Include="Unit.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Action.h" />
+    <ClInclude Include="BasicAttack.h" />
+    <ClInclude Include="Heal.h" />
+    <ClInclude Include="MultiTargetSkill.h" />
+    <ClInclude Include="SingleTargetSkill.h" />
+    <ClInclude Include="Unit.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

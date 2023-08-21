@@ -26,6 +26,12 @@ string Unit::getTeam()
 	return mTeam;
 }
 
+int Unit::getMaxHp()
+{
+
+	return mMaxHp;
+}
+
 int Unit::getCurrentHp()
 {
 

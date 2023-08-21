@@ -39,3 +39,8 @@ int Action::calculateDamage(Unit* attacker, Unit* target)
 
 	return damage;
 }
+
+void Action::act(Unit* attacker, vector<Unit*> targetTeam)
+{
+
+}

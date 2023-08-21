@@ -232,7 +232,7 @@ int main()
 	// Initialize variables
 	int round = 1;
 	int mmLeft = 30;
-	int moneyEarned = 20000000;
+	int moneyEarned = 0;
 
 	// Continue playing until last round or if victoryConditions are met
 	while (round <= 12 && mmLeft > 0)

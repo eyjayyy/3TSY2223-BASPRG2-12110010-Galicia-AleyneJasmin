@@ -28,10 +28,15 @@ void SingleTargetSkill::act(Unit* attacker, vector<Unit*> targetTeam)
 	// deduct mp
 	attacker->setCurrentMp(attacker->getCurrentMp() - getMpCost());
 
-	// deal damage
+	// deal damage to weakest enemy
 	int dmg = calculateDamage(attacker, target);
 	target->setCurrentHp(target->getCurrentHp() - dmg);
 
 	cout << attacker->getName() << " used " << getActionName() << " against " << target->getName() << ".\n"
 		<< getActionName() << " dealt " << dmg << " damage.\n" << endl;
+
+	if (target->getCurrentHp() <= 0)
+	{
+		cout << target->getName() << " died.\n" << endl;
+	}
 }

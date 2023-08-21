@@ -42,7 +42,7 @@ void BasicAttack::act(Unit* attacker, vector<Unit*> targetTeam)
 	// attack misses
 	if (!checkIfHit(attacker, targetTeam[randTarget]))
 	{
-		cout << attacker->getName() << " used Basic Attack but missed!" << endl;
+		cout << attacker->getName() << " used Basic Attack but missed!\n" << endl;
 		return;
 	}
 
@@ -61,4 +61,9 @@ void BasicAttack::act(Unit* attacker, vector<Unit*> targetTeam)
 	targetTeam[randTarget]->setCurrentHp(targetTeam[randTarget]->getCurrentHp() - dmg);
 	cout << attacker->getName() << " used " << getActionName() << " against " << targetTeam[randTarget]->getName() << ".\n"
 		<< getActionName() << " dealt " << dmg << " damage.\n" << endl;
+
+	if (targetTeam[randTarget]->getCurrentHp() <= 0)
+	{
+		cout << targetTeam[randTarget]->getName() << " died.\n" << endl;
+	}
 }

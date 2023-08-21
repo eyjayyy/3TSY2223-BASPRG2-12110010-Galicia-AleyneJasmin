@@ -6,6 +6,7 @@
 
 using namespace std;
 
+class Action;
 class Unit
 {
 public:
@@ -14,6 +15,7 @@ public:
 	// getters
 	string getName();
 	string getTeam();
+	int getMaxHp();
 	int getCurrentHp();
 	int getCurrentMp();
 	int getPow();

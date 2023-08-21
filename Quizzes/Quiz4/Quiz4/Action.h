@@ -5,6 +5,7 @@
 
 using namespace std;
 
+class Unit;
 class Action
 {
 public:
@@ -17,7 +18,7 @@ public:
 
 	// other functions
 	int calculateDamage(Unit* attacker, Unit* target);
-	virtual void act(Unit* attacker, vector<Unit*> targetTeam) = 0;
+	virtual void act(Unit* attacker, vector<Unit*> targetTeam);
 
 private:
 	string mActionName;
